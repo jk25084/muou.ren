@@ -5,6 +5,7 @@ title: 大中华之龙椅
 ---
 
 
+
 龙椅，是指古时候皇帝所坐的扶手上刻有龙的图案的椅子，龙椅一般放在古时候大臣上早朝的朝堂上的台阶上。龙椅一般由木头制成，再在扶手上刻上龙型图案，最后再漆上一层黄颜色的漆以表示皇家的威严。
 
 ![dragon throne](http://ww4.sinaimg.cn/large/006fktpLgw1ewvdm40l33j30hh087tcg.jpg)
@@ -13,4 +14,4 @@ title: 大中华之龙椅
 龙椅隐含了“第一把交椅”的意思，“坐龙椅”就是指当皇帝。龙椅的设计考究，上雕刻有威武龙腾，饰以金漆，以显示皇帝的尊贵和高尚的地位。
 相传魏征曾问过唐太宗：您知道为什么您是皇帝吗？唐太宗说了很多结果魏征都不认同，唐太宗就问魏征：那说你是为什么？魏征说因为您坐在这把龙椅上。其实很多人都不知道龙椅在中国古代皇权中的象征是和玉玺具有等同地位的。
 
-![dragon throne]({{site.baseurl}}/_posts/img/2015-10-10-dragon-throne.md.jpg)
+![dragon throne](http://ww1.sinaimg.cn/large/006fktpLgw1ewvgs17u54j30kb0iuwhm.jpg)
