@@ -1,5 +1,6 @@
 ---
 published: true
+layout: post
 title: 山核桃角魔鬼虫：北美最大的毛毛虫
 ---
 
