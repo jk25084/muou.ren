@@ -1,7 +1,8 @@
 ---
-published: false
+published: true
 title: 山核桃角魔鬼虫：北美最大的毛毛虫
 ---
+
 
  山核桃有角的魔鬼虫可以长5-6英寸长，是北美最大的毛毛虫 
 
