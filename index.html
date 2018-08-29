@@ -15,17 +15,18 @@
 		top: 0;
 		left:0;
 		width:100%;
-		line-height: 40px;
+		line-height: 16px;
 		color: #fff;
 		text-align: right;
 		background-color:#591804;
 	}
 	#control-bar span{
 		cursor: pointer;
-		padding: 10px 20px;
+		padding: 0 20px;
+		font-size: 8px;
 	}
 	#main{
-		margin-top:40px;
+		margin-top:18px;
 	}
 	#list{
 		height: 100%;
@@ -134,6 +135,7 @@ var collect = function(){
 		script.charset="gb2312";
         script.async = true;
         script.onload = function(){ngaHandler();document.body.removeChild(script);}
+	script.onerror = script.onload;
 
         document.body.appendChild(script);
 	})
