@@ -95,7 +95,7 @@ var app = new Vue({
 				ngaHandler();
 				document.body.removeChild(script);
 				this.controlbar.loading=false;
-			}}
+			};
 			script.onerror = script.onload;
 
 			document.body.appendChild(script);
