@@ -79,7 +79,7 @@ var app = new Vue({
 	el: "#app",
 	data:{
 		resp: content,
-		controlbar:{text: "▶", status:"start", loading:false},
+		controlbar:{text: "▷", status:"start", loading:false},
 		interval:{}
 	},
 	methods:{
@@ -94,7 +94,7 @@ var app = new Vue({
 			script.onload = ()=>{
 				ngaHandler();
 				document.body.removeChild(script);
-				app.controlbar.loading=false;
+				setTimeout('app.controlbar.loading=false', 1000);
 			};
 			script.onerror = script.onload;
 
@@ -108,7 +108,7 @@ var app = new Vue({
 			this.interval=setInterval(this.collect, 10000);
 		},
 		pause:function(){
-			this.controlbar.text="▶";			
+			this.controlbar.text="▷";			
 			this.controlbar.status="pause";
 			clearInterval(this.interval);
 		},
