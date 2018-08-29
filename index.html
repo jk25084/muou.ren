@@ -67,7 +67,7 @@
 		</div>      
 	</div>
 
-<div id="control-bar"><span @click="toogle">{{controlbar.text}}</span></div>
+<div id="control-bar"><img v-show="controlbar.loading" src="/images/30.gif"/><span @click="toogle">{{controlbar.text}}</span></div>
 </div>
 </body>
 <script>
@@ -83,11 +83,25 @@ var app = new Vue({
 		interval:{}
 	},
 	methods:{
+		collect:function(){
+			this.controlbar.loading=true;
+			listens.forEach(function(url){
+			var script = document.createElement('script');
+			script.src = url;
+			script.type = 'text/javascript';
+			script.charset="gb2312";
+			script.async = true;
+			script.onload = function(){ngaHandler();document.body.removeChild(script);this.controlbar.loading=false;}
+			script.onerror = script.onload;
+
+			document.body.appendChild(script);
+			})
+		},
 		start:function(){
 			this.controlbar.text="‖";			
 			this.controlbar.status="start";
-			collect();
-			this.interval=setInterval(collect, 10000);
+			this.collect();
+			this.interval=setInterval(this.collect, 10000);
 		},
 		pause:function(){
 			this.controlbar.text="▶";			
@@ -95,7 +109,7 @@ var app = new Vue({
 			clearInterval(this.interval);
 		},
 		toogle:function(){
-			if(this.controlbar.status=="start") this.pause();
+			if(this.controlbar.status!="pause") this.pause();
 			else this.start();
 		}
 	},
@@ -127,18 +141,5 @@ var ngaHandler = function(){
 			content.items.splice(0, maxlength/2); 
 	}
 }
-var collect = function(){
-	listens.forEach(function(url){
-	var script = document.createElement('script');
-        script.src = url;
-        script.type = 'text/javascript';
-	script.charset="gb2312";
-        script.async = true;
-        script.onload = function(){ngaHandler();document.body.removeChild(script);}
-	script.onerror = script.onload;
-
-        document.body.appendChild(script);
-	})
-};
 </script>
 </html>
