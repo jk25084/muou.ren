@@ -25,6 +25,10 @@
 		padding: 0 20px;
 		font-size: 1rem;
 	}
+	#progress-bar{
+		width:90%;
+		height:16px;
+	}
 	#main{
 		margin-top:18px;
 	}
@@ -67,7 +71,7 @@
 		</div>      
 	</div>
 
-<div id="control-bar"><img v-show="controlbar.loading" src="/images/30.gif"/><span @click="toogle">{{controlbar.text}}</span></div>
+<div id="control-bar"><img id="progress-bar" v-show="controlbar.loading" src="/images/30.gif"/><span @click="toogle">{{controlbar.text}}</span></div>
 </div>
 </body>
 <script>
@@ -102,7 +106,7 @@ var app = new Vue({
 			})
 		},
 		start:function(){
-			this.controlbar.text="‖";			
+			this.controlbar.text="☐";			
 			this.controlbar.status="start";
 			this.collect();
 			this.interval=setInterval(this.collect, 10000);
