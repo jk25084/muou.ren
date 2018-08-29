@@ -23,7 +23,7 @@
 	#control-bar span{
 		cursor: pointer;
 		padding: 0 20px;
-		font-size: 8px;
+		font-size: 1rem;
 	}
 	#main{
 		margin-top:18px;
@@ -79,7 +79,7 @@ var app = new Vue({
 	el: "#app",
 	data:{
 		resp: content,
-		controlbar:{text: "▶", status:"start"},
+		controlbar:{text: "▶", status:"start", loading:false},
 		interval:{}
 	},
 	methods:{
