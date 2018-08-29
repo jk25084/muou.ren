@@ -91,7 +91,11 @@ var app = new Vue({
 			script.type = 'text/javascript';
 			script.charset="gb2312";
 			script.async = true;
-			script.onload = function(){ngaHandler();document.body.removeChild(script);this.controlbar.loading=false;}
+			script.onload = function(v){return function(){
+				ngaHandler();
+				document.body.removeChild(script);
+				v.controlbar.loading=false;
+			}}(this);
 			script.onerror = script.onload;
 
 			document.body.appendChild(script);
