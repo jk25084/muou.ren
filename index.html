@@ -83,7 +83,7 @@ var app = new Vue({
 		interval:{}
 	},
 	methods:{
-		collect:function(){
+		collect:()=>{
 			this.controlbar.loading=true;
 			listens.forEach(function(url){
 			var script = document.createElement('script');
@@ -91,11 +91,11 @@ var app = new Vue({
 			script.type = 'text/javascript';
 			script.charset="gb2312";
 			script.async = true;
-			script.onload = function(v){return function(){
+			script.onload = ()=>{
 				ngaHandler();
 				document.body.removeChild(script);
-				v.controlbar.loading=false;
-			}}(this);
+				this.controlbar.loading=false;
+			}}
 			script.onerror = script.onload;
 
 			document.body.appendChild(script);
