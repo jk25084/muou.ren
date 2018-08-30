@@ -16,8 +16,7 @@
 		top: 0;
 		left:0;
 		width:100%;
-		line-height: 16px;
-		color: #fff;
+		line-height: 16px;		
 		text-align: right;
 		background-color:#591804;
 	}
@@ -25,6 +24,7 @@
 		cursor: pointer;
 		padding: 0 20px;
 		font-size: 1rem;
+		color: #fff;
 	}
 	#progress-bar{
 		position:fixed;
@@ -130,7 +130,7 @@ var app = new Vue({
 	}
 });
 var ngaHandler = function(){
-	var maxlength=100;
+	var maxlength=300;
 	for(var n=0;n<40;n++){
 		var t = script_muti_get_var_store.data.__T[n];
 		if(typeof(t)=="undefined"){
@@ -148,7 +148,7 @@ var ngaHandler = function(){
 		}
 		
 		if(content.items.length>maxlength)
-			content.items.splice(0, maxlength/2); 
+			content.items.splice(0, maxlength-20); 
 	}
 }
 </script>
